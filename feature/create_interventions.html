@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Elias Kirui">
+    <title>iReporter | welcome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/styles.css" />
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>iReporter</h1> 
+            </div>
+            <nav>
+                <ul>
+                  <li ><a href="#">Redflag</a></li>
+                  <li class="active"><a href="#">Interventions</a></li>
+                  <li><a href="signin_page.html">Sign in</a></li>
+                  <li><a href="signin_page.html">Log out</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <section class="container2">
+      <h1 id="text-center">Record an Intervention</h1>
+ <br>
+      <!--<div id="googleMap"></div>-->
+
+<script>
+ 
+function myMap() {
+var mapProp= {
+    center:new google.maps.LatLng(-1.2833,36.8167),
+    zoom:5,
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+      <div class="form1">
+        
+
+
+      <form action="" method="POST" enctype="multipart/form-data">
+        <p class="contact"><label for="name">Description</label></p>
+              <textarea rows="4" cols="50" name="name" id="name">
+              Briefly explain what happened 
+              </textarea>
+        <p class="contact"><label for="name">Ministry</label></p>
+        <input id="name" name="name" placeholder="Government ministry" required="" type="text">
+              <p>Add a map and location</p>
+              <input value="No" name="chooseone" type="radio">No</input>
+              <input value="Yes" name="chooseone"  type="radio">Yes</input>
+
+              <p class="contact"><label for="name">Time</label></p>
+              <input id="name" name="name" placeholder="approximate time of occurance" required="" tabindex="1" type="text">
+              <p class="contact"><label for="name">Date</label></p>
+              <input id="name" name="name" placeholder="Date of occurance" required="" type="text">
+              <p class="contact"><label for="pic">Upload Image/Video Evidence</label></p>
+              <input type="file" id="name" name="pic" accept="image/*,video/*" multiple>
+               
+              
+              <br>
+              <input class="buttom" name="submit" id="submit" tabindex="5" value="Please Report!" type="submit">
+
+          </form>
+          </div>
+
+    </section>
+
+    
+    
+
+
+    <footer>
+        <p>iReporter, copyright &copy; 2018</p>
+    
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsNGgaCQgE47UU7A05rmBdcfWsSDDO_7w&callback=myMap"></script>
+</body>
+</html>
